@@ -27,7 +27,7 @@ function CourseDetails() {
 
   const fetchCourse = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/courses/${id}`);
+      const res = await fetch(`https://backendmhlms-production.up.railway.app/api/courses/${id}`);
       const data = await res.json();
       setCourse(data);
       setLoading(false);
@@ -56,7 +56,7 @@ function CourseDetails() {
 
     setEnrolling(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/courses/${id}/enroll`, {
+      const res = await fetch(`https://backendmhlms-production.up.railway.app/api/courses/${id}/enroll`, {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` }
       });

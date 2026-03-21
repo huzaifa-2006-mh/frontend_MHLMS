@@ -33,7 +33,7 @@ function AdminDashboard() {
 
   const fetchCourses = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/courses');
+      const res = await fetch('https://backendmhlms-production.up.railway.app/api/courses');
       const data = await res.json();
       if(res.ok) setCourses(data);
     } catch(err) {
@@ -63,7 +63,7 @@ function AdminDashboard() {
       payload.append('videoUrl', formData.videoUrl);
       if(imageFile) payload.append('imageFile', imageFile);
       
-      const res = await fetch('http://localhost:5000/api/courses', {
+      const res = await fetch('https://backendmhlms-production.up.railway.app/api/courses', {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: payload

@@ -8,7 +8,7 @@ function Home() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/courses')
+    fetch('https://backendmhlms-production.up.railway.app/api/courses')
       .then(res => res.json())
       .then(data => {
         if(Array.isArray(data)) setCourses(data.slice(0, 3)); // Show 3 courses in row

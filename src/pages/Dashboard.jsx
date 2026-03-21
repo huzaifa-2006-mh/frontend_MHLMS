@@ -38,7 +38,7 @@ function Dashboard() {
   const fetchEnrolled = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/courses/enrolled', {
+      const res = await fetch('https://backendmhlms-production.up.railway.app/api/courses/enrolled', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
