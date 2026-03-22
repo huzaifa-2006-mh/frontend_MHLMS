@@ -39,8 +39,8 @@ function Home() {
         </div>
       </main>
 
-      <section className="container" id="courses" style={{padding: '6rem 1.5rem'}}>
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem'}}>
+      <section className="container" id="courses" style={{padding: '4rem 1.5rem'}}>
+        <div className="section-header" style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '3rem', flexWrap: 'wrap', gap: '1rem'}}>
            <div>
               <h2 className="section-title">Trending Programs</h2>
               <p style={{color: 'var(--text-muted)'}}>The most high-demand skills being taught right now.</p>
@@ -74,11 +74,11 @@ function Home() {
         </div>
       </section>
 
-      <section className="container" style={{padding: '6rem 1.5rem', textAlign: 'center'}}>
-        <div className="glass" style={{padding: '4rem 2rem', background: 'linear-gradient(135deg, rgba(99,102,241,0.1), transparent)', border: '1px solid var(--border)'}}>
-           <h2 style={{fontSize: '2.5rem', fontWeight: '800', marginBottom: '1.5rem'}}>Ready to accelerate your career?</h2>
-           <p style={{color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem'}}>Join 3,000+ students already learning on MHLMS.</p>
-           <div style={{display: 'flex', gap: '1rem', justifyContent: 'center'}}>
+      <section className="container" style={{padding: '4rem 1.5rem', textAlign: 'center'}}>
+        <div className="glass cta-box" style={{padding: '3rem 1.5rem', background: 'linear-gradient(135deg, rgba(99,102,241,0.1), transparent)', border: '1px solid var(--border)'}}>
+           <h2 className="section-title">Ready to accelerate career?</h2>
+           <p style={{color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem'}}>Join 3,000+ students already learning on MHLMS.</p>
+           <div className="hero-cta" style={{display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'}}>
               <Link to="/signup" className="btn btn-primary btn-large">Get Started Now</Link>
               <Link to="/about" className="btn btn-outline btn-large">Learn More</Link>
            </div>

@@ -22,8 +22,8 @@ function CoursesList() {
 
       <div className="container" style={{padding: '4rem 1.5rem'}}>
         <div style={{marginBottom: '4rem', textAlign: 'center'}}>
-           <h1 className="hero-title" style={{margin: '0 auto 1rem'}}>All Curriculum</h1>
-           <p style={{color: 'var(--text-muted)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto'}}>Explore specialized programs designed by industry veterans.</p>
+           <h1 className="hero-title" style={{margin: '0 auto 1rem', maxWidth: 'none'}}>All Curriculum</h1>
+           <p style={{fontSize: '1.125rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto'}}>Explore specialized programs designed by industry veterans.</p>
         </div>
 
         <div className="courses-grid">

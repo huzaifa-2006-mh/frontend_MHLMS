@@ -124,26 +124,26 @@ function CourseDetails() {
           <>
             <div className="course-header animate-fade-in" style={{marginBottom: '3rem'}}>
               <span className="tag" style={{marginBottom: '1rem'}}>{course.category}</span>
-              <h1 className="hero-title" style={{textAlign: 'left', fontSize: '3.5rem', marginBottom: '1rem'}}>{course.title}</h1>
-              <p style={{fontSize: '1.25rem', color: 'var(--text-muted)'}}>Premium program by <strong>{course.instructor?.username || 'Official Admin'}</strong></p>
+              <h1 className="hero-title" style={{textAlign: 'left', marginBottom: '1rem'}}>{course.title}</h1>
+              <p style={{fontSize: '1.125rem', color: 'var(--text-muted)'}}>Premium program by <strong>{course.instructor?.username || 'Official Admin'}</strong></p>
             </div>
-
+ 
             <div className="video-section">
               {embedUrl ? (
-                <div className="video-wrapper animate-fade-in" style={{width: '100%', maxWidth: '100%'}}>
+                <div className="video-wrapper">
                   <iframe src={embedUrl} title={course.title} allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
               ) : (
-                <div className="video-wrapper" style={{background: 'var(--bg-muted)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div className="video-wrapper" style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                    <p style={{color: 'var(--text-muted)'}}>Video material pending publication.</p>
                 </div>
               )}
             </div>
-
-            <div className="course-interact glass" style={{padding: '3rem', marginTop: '2.5rem'}}>
-               <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2.5rem', borderBottom: '1px solid var(--border)', paddingBottom: '2rem'}}>
+ 
+            <div className="course-interact glass" style={{padding: '2rem', marginTop: '2.5rem'}}>
+               <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2.5rem', borderBottom: '1px solid var(--border)', paddingBottom: '2rem', flexWrap: 'wrap', gap: '1.5rem'}}>
                   <div>
-                    <h2 style={{fontSize: '2rem', fontWeight: '800'}}>Module Overview</h2>
+                    <h2 className="section-title" style={{margin: 0}}>Module Overview</h2>
                     <p style={{color: 'var(--text-muted)'}}>Includes full access, lifetime updates, and verified certificate.</p>
                   </div>
                   {enrolled && (
@@ -151,13 +151,13 @@ function CourseDetails() {
                   )}
                   {!enrolled && (
                     <div style={{textAlign: 'right'}}>
-                       <span style={{fontSize: '2.5rem', fontWeight: '900'}}>${course.price}</span>
+                       <span style={{fontSize: '2rem', fontWeight: '900', display: 'block'}}>${course.price}</span>
                        <button onClick={handleEnroll} disabled={enrolling} className="btn btn-primary btn-block" style={{marginTop: '1rem'}}>{enrolling ? 'Processing...' : 'Enroll Program'}</button>
                     </div>
                   )}
                </div>
                
-               <p style={{fontSize: '1.1rem', color: 'var(--text-muted)', lineHeight: '1.8', whiteSpace: 'pre-wrap'}}>{course.description}</p>
+               <p style={{fontSize: '1rem', color: 'var(--text-muted)', lineHeight: '1.8', whiteSpace: 'pre-wrap'}}>{course.description}</p>
             </div>
           </>
         ) : (

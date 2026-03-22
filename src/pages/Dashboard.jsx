@@ -100,9 +100,9 @@ function Dashboard() {
            </div>
         ) : (
           <>
-            <header className="dashboard-header" style={{marginBottom: '2.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <header className="dashboard-header" style={{marginBottom: '2.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem'}}>
                 <div>
-                  <h1 style={{fontSize: '2rem', fontWeight: 800}}>Portal Hub</h1>
+                  <h1 className="section-title" style={{margin: 0}}>Portal Hub</h1>
                   <p style={{color: '#71717a'}}>Manage your curriculum and professional certifications.</p>
                 </div>
                 <Link to="/courses" className="btn btn-primary">Browse Apps</Link>
