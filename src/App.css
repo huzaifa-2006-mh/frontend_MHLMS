@@ -591,8 +591,58 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@media print {
-  .nav-bar, .footer-section, .btn-outline, .hero-section { display: none !important; }
-  .glass { background: #fff !important; color: #000 !important; border: 2px solid #000 !important; box-shadow: none !important; }
-  body { background: #fff !important; color: #000 !important; }
+/* Footer Responsive */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* Header to Heading Gap */
+.hero-section {
+  padding: 8rem 1.5rem 6rem; /* Increased top padding */
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 6rem 1rem 4rem;
+  }
+}
+
+/* General Page Spacing */
+.page-header {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    margin-top: 2rem;
+  }
 }
